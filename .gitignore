@@ -1,35 +1,39 @@
-# Environment variables
-.env
-
-# Generated images
-images/
-
-# Dependencies
+# 依賴
 node_modules/
+package-lock.json
+yarn.lock
 
-# Build output
-dist/
-
-# Logs
-logs/
+# 日誌
+logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# IDE and editor files
+# 運行時數據
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# 目錄
+dist/
+build/
+coverage/
+
+# 環境變量
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# 編輯器
 .idea/
 .vscode/
 *.swp
 *.swo
+
+# 操作系統
 .DS_Store
-
-# Coverage directory
-coverage/
-
-# Temporary files
-tmp/
-temp/
-
-# Local development
-*.local
+Thumbs.db

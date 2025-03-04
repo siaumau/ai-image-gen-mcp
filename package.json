@@ -1,32 +1,29 @@
 {
-  "name": "image-gen-mcp",
+  "name": "ai-image-gen-mcp",
   "version": "1.0.0",
-  "description": "MCP Server for image generation using Replicate's flux-schnell model",
-  "type": "module",
-  "main": "dist/server.js",
+  "description": "MCP服務器，提供fetch功能",
+  "main": "src/index.js",
+  "bin": {
+    "fetch-mcp": "src/cli.js"
+  },
   "scripts": {
-    "build": "tsc",
-    "start": "node dist/server.js",
-    "dev": "node --loader ts-node/esm src/server.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "node src/client-example.js"
   },
   "keywords": [
     "mcp",
-    "image-generation",
-    "replicate",
-    "flux-schnell"
+    "cursor",
+    "fetch"
   ],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.4.1",
-    "@types/node": "^20.0.0",
-    "dotenv": "^16.0.0",
-    "replicate": "^0.25.0",
-    "typescript": "^5.0.0",
-    "zod": "^3.24.1"
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "node-fetch": "^2.6.9"
   },
   "devDependencies": {
-    "ts-node": "^10.9.0"
+    "nodemon": "^3.0.1"
   }
 }
